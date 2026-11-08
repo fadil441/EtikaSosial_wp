@@ -1,0 +1,48 @@
+# ============================================================
+# EtikaSosial — .gitignore
+# ============================================================
+
+# Konfigurasi lokal: jangan pernah commit kredensial database.
+/wp-config.php
+/wp-config-local.php
+
+# Berkas contoh konfigurasi WAJIB ikut repositori.
+!/wp-config-sample.php
+
+# Berkas runtime dan cache WordPress.
+/wp-content/uploads/*
+!/wp-content/uploads/.gitkeep
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backup-*/
+/wp-content/ai1wm-backups/
+/wp-content/debug.log
+*.log
+
+# Berkas server yang bergantung pada folder instalasi.
+/.htaccess
+/.user.ini
+/php.ini
+
+# Dump dan cadangan database lokal.
+/db/
+*.sql
+*.sql.gz
+
+# Berkas sementara.
+*.bak
+*.old
+*.orig
+*.tmp
+*.swp
+
+# Editor dan sistem operasi.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependensi (jika nanti ditambahkan).
+node_modules/
+vendor/
