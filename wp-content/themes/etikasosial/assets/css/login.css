@@ -1,0 +1,208 @@
+/* ============================================================
+   EtikaSosial — login.css
+   Gaya halaman login WordPress agar selaras dengan situs.
+   ============================================================ */
+
+:root {
+  --es-bg: #0b0f14;
+  --es-surface: #10161d;
+  --es-surface-2: #0d1218;
+  --es-line: rgba(148, 163, 184, 0.18);
+  --es-line-strong: rgba(148, 163, 184, 0.3);
+  --es-text: #eef3f9;
+  --es-soft: #c3ceda;
+  --es-muted: #93a1b3;
+  --es-gold: #d8b878;
+  --es-gold-strong: #e8cd97;
+  --es-mint: #6fd6b8;
+  --es-danger: #e76f6f;
+}
+
+body.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 18px;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(216, 184, 120, 0.16), transparent 44%),
+    radial-gradient(circle at 88% 16%, rgba(111, 214, 184, 0.1), transparent 42%),
+    var(--es-bg);
+  color: var(--es-text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.login h1 {
+  margin-bottom: 22px;
+}
+
+.login h1 a {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-image: none;
+  color: var(--es-text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-indent: 0;
+  text-decoration: none;
+}
+
+.login h1 a::after {
+  content: ".";
+  color: var(--es-gold);
+}
+
+.login form {
+  width: min(390px, 100%);
+  margin: 0;
+  padding: 28px 28px 24px;
+  border: 1px solid var(--es-line);
+  border-radius: 18px;
+  background: var(--es-surface);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+.login label {
+  color: var(--es-soft);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.login form .forgetmenot label {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="email"] {
+  padding: 11px 13px;
+  border: 1px solid var(--es-line);
+  border-radius: 10px;
+  background: var(--es-surface-2);
+  color: var(--es-text);
+  font-size: 0.92rem;
+  box-shadow: none;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="email"]:focus {
+  border-color: var(--es-gold);
+  box-shadow: 0 0 0 3px rgba(216, 184, 120, 0.16);
+  outline: none;
+}
+
+.login input[type="checkbox"] {
+  border-color: var(--es-line-strong);
+  background: var(--es-surface-2);
+}
+
+.login input[type="checkbox"]:checked {
+  background: var(--es-gold);
+  border-color: var(--es-gold);
+}
+
+.wp-core-ui .button-primary {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--es-gold), var(--es-gold-strong));
+  color: #12181f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-shadow: none;
+  box-shadow: 0 10px 24px rgba(216, 184, 120, 0.2);
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+  background: linear-gradient(135deg, var(--es-gold-strong), #f0dcb0);
+  color: #0d1218;
+}
+
+.login .button.wp-hide-pw {
+  color: var(--es-muted);
+}
+
+.login #nav,
+.login #backtoblog {
+  width: min(390px, 100%);
+  margin: 16px 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.login #nav a,
+.login #backtoblog a {
+  color: var(--es-gold);
+  text-decoration: none;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+  color: var(--es-gold-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.login #nav {
+  color: var(--es-muted);
+}
+
+.login .message,
+.login .notice,
+.login #login_error {
+  width: min(390px, 100%);
+  margin-bottom: 16px;
+  padding: 12px 15px;
+  border: 1px solid var(--es-line);
+  border-left: 3px solid var(--es-gold);
+  border-radius: 10px;
+  background: var(--es-surface);
+  color: var(--es-soft);
+  font-size: 0.84rem;
+  box-shadow: none;
+}
+
+.login #login_error {
+  border-left-color: var(--es-danger);
+}
+
+.login .success {
+  border-left-color: var(--es-mint);
+}
+
+.login .privacy-policy-page-link {
+  color: var(--es-muted);
+  font-size: 0.75rem;
+}
+
+.login .language-switcher {
+  margin-top: 18px;
+}
+
+.login .language-switcher select {
+  border: 1px solid var(--es-line);
+  border-radius: 8px;
+  background: var(--es-surface);
+  color: var(--es-soft);
+  font-size: 0.78rem;
+}
+
+.login .dashicons {
+  color: var(--es-muted);
+}
+
+@media (max-width: 420px) {
+  .login form {
+    padding: 22px 20px;
+  }
+}
